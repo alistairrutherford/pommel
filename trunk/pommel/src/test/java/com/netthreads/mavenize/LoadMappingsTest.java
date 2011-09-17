@@ -27,7 +27,7 @@ import junit.framework.TestSuite;
  */
 public class LoadMappingsTest extends TestCase
 {
-    private static final String MAP_FILE_PATH = "/mapping.xml";
+    private static final String MAP_FILE_PATH = "src/test/resources/mapping.xml";
 
     /**
      * @return the suite of tests being tested
@@ -41,7 +41,7 @@ public class LoadMappingsTest extends TestCase
      * Test loading mapping definition file.
      * 
      */
-    public void testApp()
+    public void testApp() throws PommelException
     {
         Pommel pommel = new Pommel();
 
