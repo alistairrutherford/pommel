@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<mappings>
+  <mapping>
+    <dependency-source>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>*</version>
+    </dependency-source>
+    <dependency-target>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.9</version>
+        <scope>test</scope>
+    </dependency-target>
+  </mapping>
+
+</mappings>

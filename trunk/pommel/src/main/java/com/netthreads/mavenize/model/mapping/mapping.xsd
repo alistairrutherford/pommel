@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="mappings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="mapping"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mapping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element ref="dependency"/>
+          <xs:element ref="dependency-source"/>
+        </xs:choice>
+        <xs:element ref="dependency-target"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dependency">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="groupId"/>
+        <xs:element ref="artifactId"/>
+        <xs:element ref="version"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dependency-source">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="groupId"/>
+        <xs:element ref="artifactId"/>
+        <xs:element ref="version"/>
+        <xs:element minOccurs="0" ref="scope"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dependency-target">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="groupId"/>
+        <xs:element ref="artifactId"/>
+        <xs:element ref="version"/>
+        <xs:element minOccurs="0" ref="scope"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="groupId" type="xs:NCName"/>
+  <xs:element name="artifactId" type="xs:NCName"/>
+  <xs:element name="version" type="xs:NMTOKEN"/>
+  <xs:element name="scope" type="xs:NCName"/>
+</xs:schema>
