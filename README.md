@@ -7,6 +7,7 @@ This is a companion tool to mavenize which will take existing java projects and 
 Example
 Say, for instance, you want to update all the junit dependencies in a number of java projects. Also you want to make sure the dependency scope is set to "test". You create a mapping file like the following:
 
+```xml
 <?xml version="1.0"?>
 <mappings>
   <mapping>
@@ -24,8 +25,10 @@ Say, for instance, you want to update all the junit dependencies in a number of 
   </mapping>
 
 </mappings>
+```
 You can also specify a wildcard for the source version if you want to match any version of junit i.e..
 
+```xml
 <?xml version="1.0"?>
 <mappings>
   <mapping>
@@ -43,6 +46,7 @@ You can also specify a wildcard for the source version if you want to match any 
   </mapping>
 
 </mappings>
+```
 Now simply point the tool at your projects with the directory and mapping file as the parameters i.e.
 
 java -jar pommel-1.0.0.jar -iC:\Development\java\projects -mmapping.xml
